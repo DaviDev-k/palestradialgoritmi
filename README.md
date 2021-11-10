@@ -1,4 +1,4 @@
-# Palestra di Algoritmi 2018/2019
+# Palestra di Algoritmi 2021/2022
 
 ![Logo OII](https://training.olinfo.it/custom_images/logo.png)
 
