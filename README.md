@@ -3,7 +3,7 @@
 ![Logo OII](https://training.olinfo.it/custom_images/logo.png)
 
 ### Introduzione
-Il Dipartimento di [Ingegneria e Scienze dell’Informazione (DISI)](https://www.disi.unitn.it/ "DISI") dell'Università degli Studi di Trento propone un percorso di allenamento per le Olimpiadi di Informatica per l’a.s. 2021–2022.
+Il Dipartimento di [Ingegneria e Scienze dell’Informazione (DISI)](https://www.disi.unitn.it/) dell'Università degli Studi di Trento propone un percorso di allenamento per le Olimpiadi di Informatica per l’a.s. 2021–2022.
 
 Questo percorso di allenamento ha molteplici obiettivi:
 * far conoscere agli studenti lo studio degli algoritmi come uno degli argomenti fondamentali dell’informatica
@@ -16,9 +16,9 @@ Questo repository sarà il contenitore di tutte le attività che verranno propos
 ### Link utili
 [Correttore olimpiadi](https://training.olinfo.it/ "Correttore olimpiadi")
 
-[Guida alle olimpiadi di informatica, Prof. Bugatti](http://www.imparando.net/sito/olimpiadi_di_informatica/guida_sesta_edizione.pdf "Olimpiadi di Informatica - Alessandro Bugatti")
+[Guida alle olimpiadi di informatica, Prof. Bugatti](http://www.imparando.net/sito/olimpiadi_di_informatica/guida_sesta_edizione.pdf)
 
-[Sito Prof. Montresor](http://cricca.disi.unitn.it/montresor/ "Sito Montresor")
+[Sito Prof. Montresor](http://cricca.disi.unitn.it/montresor/)
 
 ### Contatti
 
