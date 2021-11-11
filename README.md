@@ -23,8 +23,6 @@ Questo repository sarà il contenitore di tutte le attività che verranno propos
 ### Contatti
 
 - davide.vecchi@studenti.unitn.it
-- nicola.zilio-1@studenti.unitn.it
-- ivan.martini@studenti.unitn
 
 ### Team
 
