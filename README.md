@@ -14,7 +14,7 @@ Questo percorso di allenamento ha molteplici obiettivi:
 Questo repository sarà il contenitore di tutte le attività che verranno proposte dai vari tutor, ad ogni incontro troverete link ad esercizi da svolgere (fonte: correttore delle olimpiadi), codice delle soluzioni, spiegazione delle soluzioni e alcune note teoriche o di programmazione.
 
 ### Link utili
-[Correttore olimpiadi](https://training.olinfo.it/ "Correttore olimpiadi")
+[Correttore olimpiadi](https://training.olinfo.it/)
 
 [Guida alle olimpiadi di informatica, Prof. Bugatti](http://www.imparando.net/sito/olimpiadi_di_informatica/guida_sesta_edizione.pdf)
 
