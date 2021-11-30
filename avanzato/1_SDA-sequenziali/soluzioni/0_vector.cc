@@ -1,4 +1,4 @@
-// Esempio didattico dei metodi della classe vector
+// Esempio didattico dell'utilizzo dei metodi della classe vector
 
 #include <iostream>
 #include <vector>
