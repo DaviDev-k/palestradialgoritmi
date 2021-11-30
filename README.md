@@ -38,4 +38,4 @@ soluzioni e alcune note teoriche o di programmazione.
 Davide Vecchi
 - Mail: [davide.vecchi@studenti.unitn.it](mailto:davide.vecchi@studenti.unitn.it)
 - Telegram: [davide2e3](https://t.me/davide2e3)
-- GitHub: [DaviDev-k](https://github.com/DaviDev-k)
+- GitHub: [DaviDev-k](https://github.com/davidevecchi)
