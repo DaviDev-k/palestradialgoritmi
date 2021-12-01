@@ -15,7 +15,7 @@
   
     - Utilizzare il tipo più adatto per le variabili, in modo che possano contenere valori di input molto grandi ($2^{62}$)
     - Le potenze di $2$ possono essere eseguite in modo veloce ed elegante con il binary left shift
-      - `1ull << esp` $\equiv 2^{\rm esp}$
+      - `1ull << esp` == 2^esp^
       - `1ull` specifica che il valore `1` deve essere trattato come `unsigned long long`
 
 
