@@ -20,6 +20,7 @@
      >   - `1ull` specifica che il valore `1` deve essere trattato come `unsigned long long`
      > - Il metodo `std::vector.insert(it pos, it first, it last)` può essere utilizzato per appendere un vettore ad un altro vettore
      >   - e.g. `A.insert(A.begin(), B.begin(), B.end();` inserisce tutti gli elementi di `B` alla fine di `A`
+     > - Parole chiave: ricerca binaria, bisezione
 
 
 
