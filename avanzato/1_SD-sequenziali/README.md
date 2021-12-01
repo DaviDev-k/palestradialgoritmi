@@ -5,7 +5,7 @@
 
 1. [deque](https://www.hackerrank.com/challenges/deque-stl/problem?isFullScreen=true "hackerrank") - HackerRank (`deque`)
 2. [restaurant](https://open.kattis.com/problems/restaurant "kattis") - SWERK 2009 (pile)
-3. [sylvester](https://open.kattis.com/problems/sylvester "kattis") - Norwegian/Swedish Championships 2004 (`vector`)
+3. [sylvester](https://open.kattis.com/problems/sylvester "kattis") - Norwegian/Swedish Championships 2004 (`vector` multidimensionali)
   
    - **Sottoproblemi alternativi**
     
