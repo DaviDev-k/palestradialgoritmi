@@ -1,4 +1,4 @@
-# Palestra di Algoritmi, 2021/2022
+# Palestra di Algoritmi 2021/22 - Corso avanzato
 
 ![Logo OII](https://training.olinfo.it/custom_images/logo.png)
 
