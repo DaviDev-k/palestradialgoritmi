@@ -12,4 +12,4 @@
 7. [trendingtopic](https://open.kattis.com/problems/trendingtopic "kattis")* - SWERC 2013
 
 
-*: difficili
+*difficili
