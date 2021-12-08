@@ -1,7 +1,7 @@
 # Capitolo 1: [containers sequenziali](https://docs.google.com/presentation/d/1rLoEcHL2Za4xDP3VjZ7F9eZ1TYg0vjgwFEV6lehK-IQ/edit?usp=sharing)
 
 
-## Problemi della settimana
+### Problemi della settimana
 
 1. [deque](https://www.hackerrank.com/challenges/deque-stl/problem?isFullScreen=true "hackerrank") - HackerRank (`deque`)
 2. [restaurant](https://open.kattis.com/problems/restaurant "kattis") - SWERK 2009 (pile)

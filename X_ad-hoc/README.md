@@ -1,10 +1,10 @@
 # Capitolo X: problemi ad-hoc
 
-## Problemi ad-hoc
+### Problemi ad-hoc
 Problemi speciali che spesso non richiedono particolari tecniche algoritmiche o strutture dati, bensì si presentano in un formato criptico, con particolari richieste implementative e di I/O, oppure a tema matematico.
 
 
-## Problemi della settimana
+### Problemi della settimana
 
 1. [piastrelle](https://training.olinfo.it/#/task/piastrelle/statement "oii") - Own
 2. [caduta](https://training.olinfo.it/#/task/oii_caduta/statement "oii") - OII 2017 (Trento)
@@ -16,7 +16,7 @@ Problemi speciali che spesso non richiedono particolari tecniche algoritmiche o 
 
 
 
-## Bonus
+### Bonus
 
 Hai risolto tutti i problemi della settimana e fremi dalla voglia di farne altri?
 
@@ -24,6 +24,6 @@ Ce ne sono centinaia che ti aspettano! Invia una mail e ti saranno suggeriti que
 
 
 
-## Soluzioni
+### Soluzioni
 
 Le soluzioni saranno presentate durante il prossimo incontro e caricate in questa cartella.
