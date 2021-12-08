@@ -1,4 +1,4 @@
-# Capitolo 2: [strutture dati associative](https://docs.google.com/presentation/d/13MT3okF-AMpIyiS0EM_nxxg_ZwY66YDuCITwoU1eHaI/edit?usp=sharing)
+# Capitolo 2: [containers associativi](https://docs.google.com/presentation/d/1rD0LRZbhHGXcQ1dewmQvlwltaKNt-kmYgQguskiqY14/edit?usp=sharing)
 
 
 ## Problemi della settimana

@@ -1,4 +1,4 @@
-# Capitolo 1: [strutture dati sequenziali](https://docs.google.com/presentation/d/1bskmC_TBDLmG1m4mSxobEBzUavjYpS9yx6dcGFb6JE4/edit?usp=sharing)
+# Capitolo 1: [containers sequenziali](https://docs.google.com/presentation/d/1rLoEcHL2Za4xDP3VjZ7F9eZ1TYg0vjgwFEV6lehK-IQ/edit?usp=sharing)
 
 
 ## Problemi della settimana
