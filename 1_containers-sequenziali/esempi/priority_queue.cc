@@ -42,4 +42,9 @@ int main() {
 		cout << pair_pq.top().first << ":" << pair_pq.top().second << "  ";
 		pair_pq.pop();
 	}
+	
+	map<int, int> my_map;
+	cout << my_map[0] << " ";
+	my_map[0] = 8;
+	cout << my_map[0] << " ";
 }

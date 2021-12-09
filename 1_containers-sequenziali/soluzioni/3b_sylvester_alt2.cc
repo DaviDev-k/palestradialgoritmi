@@ -8,7 +8,7 @@ using namespace std;
 
 void print(string s);
 
-int main(int argc, char **argv) {
+int main() {
 	
 	vector < vector < vector < vector < int >> >> H(2);  // +/-, n, y, x
 	H[0].resize(MAX_SIZE);
@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
 		for (int k = 0; k < 2; k++) {              // blocchi di righe
 			for (int y = 0; y < l; y++) {          // righe di un blocco
 				for (int x = 0; x < 2; x++) {      // blocchi di colonne
-					for (int h = 0; h < 2; h++) {  // pos e neg
+					for (int h = 0; h < 2; h++) {  // positivi e negativi
 						H[h][i][y + k * l].insert(
 								H[h][i][y + k * l].end(),
 								H[h ^ (x & k)][i - 1][y].begin(),
