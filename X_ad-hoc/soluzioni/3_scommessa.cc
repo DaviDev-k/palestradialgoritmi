@@ -21,14 +21,14 @@ int main() {
 	}
 	
 	// Un numero può rimanere spaiato se e solo se
-	//  1. è pari
+	//  1. è pari &&
 	//  2. i sottoinsiemi di numeri che lo precedono e quelli che lo seguono
 	//     sono formati dallo stesso numero di pari e dispari
 	vector<int> single;
 	for (int i = 0; i < N; i++) {
 		if (C[i] % 2 == 0
-		    && (par_dis[0][i] - ((C[i] + 1) % 2) == par_dis[1][i] - (C[i] % 2))
-		    && par_dis[0][N - 1] - par_dis[0][i] == par_dis[1][N - 1] - par_dis[1][i]) {
+		    && (par_dis[0][i - 1] == par_dis[1][i - 1])
+		    && (par_dis[0][N - 1] - par_dis[0][i] == par_dis[1][N - 1] - par_dis[1][i])) {
 			single.push_back(C[i]);
 		}
 	}
