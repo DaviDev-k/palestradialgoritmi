@@ -7,13 +7,15 @@ Problemi speciali che spesso non richiedono particolari tecniche algoritmiche o 
 ### Problemi della settimana
 
 1. [piastrelle](https://training.olinfo.it/#/task/piastrelle/statement "oii") - Own
-2. [caduta](https://training.olinfo.it/#/task/oii_caduta/statement "oii") - OII 2017 (Trento)
+2. [caduta](https://training.olinfo.it/#/task/oii_caduta/statement "oii")* - OII 2017 (Trento)
 3. [scommessa](https://training.olinfo.it/#/task/scommessa/statement "oii") - OII 2017
-4. [painting](https://training.olinfo.it/#/task/ois_painting/statement "oii") - OIS 2018 
+4. [painting](https://training.olinfo.it/#/task/ois_painting/statement "oii")* - OIS 2018 
 
 - EXTRA: [powers](https://open.kattis.com/contests/y3torr/problems/powers "kattis") - ProgNova 2016
   - Premio speciale per chi riesce anche a dimostrarlo :)
 
+
+*difficile arrivare a 100
 
 
 ### Bonus

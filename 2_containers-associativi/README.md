@@ -13,3 +13,9 @@
 
 
 *difficili
+
+
+
+### Note
+
+I problemi di Kattis (dal 4 al 7) li ho risolti qualche tempo fa senza commenti. Se vi interessa che inserisca qualche spiegazione all'interno del codice non esitate a contattarmi.
