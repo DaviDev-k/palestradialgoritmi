@@ -33,7 +33,7 @@ int main() {
 		for (int j = 0; j < N; j++) {
 			if ((i != j) && ((bs[i] & bs[j]) == bs[i])) { count++; }  // incrementa `count` se `bs[i]` ⊆ `bs[j]`
 			/*
-			 * (i != j)                    evita di confrontare un username con se stesso
+			 * (i != j)                    evita di confrontare uno username con se stesso
 			 *
 			 * ((bs[i] & bs[j]) == bs[i])  fa bitwise-and dei due set per ottenere l'intersezione
 			 *                             e poi la confronta con il primo set (Si ⊆ Sj ⟺ (Si = Si ∩ Sj))
