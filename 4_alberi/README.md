@@ -14,6 +14,12 @@ Implementazione in C++
 - [Alberi generici](https://www.geeksforgeeks.org/generic-tree-level-order-traversal/)
 
 
+Accesso ad attributi e metodi di variabili puntatore
+```c++
+Node *root = new Node(1);
+root->left == (*root).left;  // scritture equivalenti
+```
+
 
 ### Problemi della settimana
 
