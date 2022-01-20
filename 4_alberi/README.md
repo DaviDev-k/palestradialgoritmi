@@ -1,4 +1,4 @@
-# Capitolo 3: tecniche algoritmiche
+# Capitolo 4: alberi
 
 ### Slides
 
