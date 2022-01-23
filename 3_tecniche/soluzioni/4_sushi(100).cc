@@ -10,7 +10,7 @@ int sushi(int, int const B, std::vector<int> const A) {
 	if (B == 0) return 0;
 	
 	std::bitset<MAXB + 1> K(1);
-	int R{1};
+	int R{1};  // int R = 1;
 	
 	for (;;) {
 		auto K2 = K;
