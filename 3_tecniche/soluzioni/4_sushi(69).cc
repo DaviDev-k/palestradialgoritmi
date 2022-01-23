@@ -1,28 +1,32 @@
 #include <bits/stdc++.h>
 
-#define DEBUG 1
+#define DEBUG 0
 
 using namespace std;
 
-typedef vector <vector<vector < int>>>
-vector3i;
+// Alias per vettore tridimensionale di interi
+typedef vector<vector<vector<int>>> vector3i;
 
+// Calcola la spesa totale, dato un vettore `v` contenente il conteggio di ciascun piatto
 int sum(const vector<int> &A, const vector<int> &v) {
 	int sum = 0;
 	for (int i = 0; i < A.size(); i++) { sum += A[i] * v[i]; }
 	return sum;
 }
 
+// Ritorna una copia di `v` alla quale vengono aggiunti `k` piatti `i`
 vector<int> take(const vector<int> &v, int i, int k) {
 	vector<int> u(v);  // costruttore di copia
 	u[i] += k;
 	return u;
 }
 
+// Wrapper per `max_element`
 int max_elem(const vector<int> &v) {
 	return *max_element(v.begin(), v.end());
 }
 
+// Dati due vettori `u` e `v`, ritorna quello avente somma `b` e con il minor numero di ripetizioni
 vector<int> lower(const vector<int> &u, const vector<int> &v, const vector<int> &A, int b) {
 	int max_u = max_elem(u);
 	int max_v = max_elem(v);
@@ -34,54 +38,45 @@ vector<int> lower(const vector<int> &u, const vector<int> &v, const vector<int> 
 	return vector<int>(v.size(), 0);
 }
 
-vector<int> sushi_rec(const vector<int> &A, int N, int B, int n, int b, vector3i &DP) {
-	if (n <= 0 || b <= 0) { return vector<int>(N, 0); }  // casi base
-	if (DP[n][b][0] == -1) {                             // cella non calcolata → ricorsione
-		int i = n - 1;                                   // indice del piatto attuale
+// Funzione ricorsiva con memoization
+vector<int> sushi_rec(const vector<int> &A, int i, int b, vector3i &DP) {
+	
+	// Casi base
+	if (i < 0 || b <= 0) { return vector<int>(A.size(), 0); }
+	
+	// Cella non calcolata e ricorsione
+	if (DP[i][b][0] == -1) {
+		
+		/* Scorrere la riga `DP[i]` per valori di `j` tali per cui `(b - j) % A[i] == 0`.
+		 * Così facendo si considerano solo le celle `DP[i-1][j]` precedentemente calcolate, tali per cui è
+		 * possibile aggiungere `k` piatti `i` e mantenere il resto pari a 0.
+		 */
 		for (int j = b % A[i], k = b / A[i]; j <= b; j += A[i], k--) {
-			DP[n][b] = lower(DP[n][b],
-			                  lower(take(sushi_rec(A, N, B, n - 1, j, DP), i, k),
-			                        take(sushi_rec(A, N, B, n, j - A[i], DP), i, k), A, b), A, b);
+			DP[i][b] = lower(DP[i][b], take(sushi_rec(A, i - 1, j, DP), i, k), A, b);
 		}
 	}
-	return DP[n][b];  // cella già calcolata o appena calcolata
+	
+	return DP[i][b];  // cella già calcolata o appena calcolata
 }
 
 int sushi(int N, int B, vector<int> A) {
 	
-	/* Si costruisce una tabella DP tridimensionale, che può essere vista come una semplice matrice bidimensionale,
+	/* Si costruisce una tabella DP tridimensionale, che può essere vista come una matrice bidimensionale,
 	 * con N+1 righe (una per ogni piatto) e B+2 colonne (i soldi rimanenti), le cui celle contengono vettori di
-	 * lunghezza N, che rappresentano il conteggio di ogni piatto. Se il vettore contiene solo valori 0, allora non
-	 * esiste una combinazione di piatti il cui prezzo totale sia esattamente B.
-	 * La prima riga e la prima colonna rappresentano i casi base. Nella pratica sono utili per "coronare" la matrice
-	 * di valori 0, in modo da gestire alla stessa maniera tutte le altre celle interne.
+	 * lunghezza N, rappresentanti il conteggio di ogni piatto.
+	 * Se il vettore contiene solo valori
+	 *  ·  0: non esiste una combinazione di piatti il cui prezzo totale sia esattamente B
+	 *  · -1: la cella non è ancora stata calcolata
 	 */
-	vector3i DP(N + 1, vector < vector < int >> (B + 1, vector<int>(N, -1)));  // DP[N+1][B+2][N]
-//	vector <vector<int>> DP2(N + 1, vector<int>(B + 1, 0));
-	
-	vector<int> ret = sushi_rec(A, N, B, N, B, DP);
-
-
-#if DEBUG  // stampa tabella DP
-	for (int n = 1; n <= N; n++) {
-		for (int b = 1; b <= B; b++) {
-			for (int j = 0; j < N; j++) {
-				if (DP[n][b][j] >= 0) { cout << DP[n][b][j] << ","; }
-				else { cout << "-,"; }
-			}
-			cout << "\b \t";
-		}
-		cout << endl << endl;
-	}
-#endif
-	
+	vector3i DP(N, vector<vector<int>>(B + 1, vector<int>(N, -1)));  // DP[N][B+2][N]
+	vector<int> ret = sushi_rec(A, N - 1, B, DP);
 	int ret_max = max_elem(ret);
 	return (ret_max > 0) ? ret_max : -1;
 }
 
 
 #if DEBUG
-
+																														
 int main() {
 	ifstream cin("input.txt");
 	ofstream cout("output.txt");
