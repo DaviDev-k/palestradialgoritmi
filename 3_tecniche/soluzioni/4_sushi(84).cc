@@ -4,6 +4,7 @@
 
 using namespace std;
 
+
 // Struttura che memorizza il vettore delle ripetizioni e la ripetizione massima
 struct Entry {
 	
@@ -18,6 +19,7 @@ struct Entry {
 	
 };
 
+
 // Ritorna una copia di `v` alla quale vengono aggiunti `k` piatti `i`
 Entry take(const Entry &v, const vector<int> &A, int i, int k) {
 	Entry u(A.size());
@@ -27,16 +29,20 @@ Entry take(const Entry &v, const vector<int> &A, int i, int k) {
 	return u;
 }
 
+
 // Ritorna `true` se `v` ha ripetizione massima inferiore di `u` e se ha somma `b`
 bool lower(Entry &v, const Entry &u, int i, int k) {
 	return (u.max == 0 || max(v.max, v.count[i] + k) < u.max);  // `u` non è mai stato computato, oppure `v < u`
 }
+
 
 // Ritorna `true` se `v` ha somma `b`
 bool check(const Entry &v, const vector<int> &A, int i, int k, int b) {
 	return (v.max != 0 || k * A[i] == b);  // `v` è già stato computato in precedenza, oppure ha somma `b`
 }
 
+
+// Funzione principale, invocata dal grader
 int sushi(int N, int B, vector<int> A) {
 	
 	/* Sia `DP` una tablella di programmazione dinamica di `N` righe e `B+1` colonne.
