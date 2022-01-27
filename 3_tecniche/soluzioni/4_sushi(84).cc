@@ -50,10 +50,10 @@ int sushi(int N, int B, vector<int> A) {
 	 * Tuttavia è possibile comprimere la tabella `DP[N][B+1]` in sole 2 righe, poiché durante la costruzione
 	 * riga per riga della tabella, alla i-esima riga viene consultata soltanto la riga i-1.
 	 */
-	vector<vector<Entry>> DP(2, vector<Entry>(B + 1, Entry(N)));  // DP[2][B+1]
+	vector <vector<Entry>> DP(2, vector<Entry>(B + 1, Entry(N)));  // DP[2][B+1]
 	
 	bool now = 0;
-	for (int i = 0; i < N; i++, now = !now) {
+	for (int i = 0; i < N; i++, now = !now) {  // aggiorna `now`
 		for (int b = 0; b <= B; b++) {
 			
 			/* Scorrere la riga `DP[!now]` per valori di `j` tali per cui `(b - j) % A[i] == 0`.
@@ -65,8 +65,8 @@ int sushi(int N, int B, vector<int> A) {
 			int max_k = b / A[i];   // numero massimo di piatti `i` che possono essere comprati con `b` soldi
 			
 			for (int j = offset, k = max_k; j <= b; j += step, k--) {
-				if (lower(DP[!now][j], DP[now][b], i, k) &&   // `v` ha ripetizione massima inferiore di `u`
-				    check(DP[!now][j], A, i, k, b)) {         // `v` ha somma pari a `b`
+				if (lower(DP[!now][j], DP[now][b], i, k)      // `v` ha ripetizione massima inferiore di `u`
+				    && check(DP[!now][j], A, i, k, b)) {      // `v` ha somma pari a `b`
 					DP[now][b] = take(DP[!now][j], A, i, k);  // prendi `k` piatti `i`
 				}
 			}
