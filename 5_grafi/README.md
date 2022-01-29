@@ -23,4 +23,9 @@ adj[1] = {{0, 3}, {2, 4}};
 
 ### Problemi della settimana
 
-1. [...](https://training.olinfo.it/#/task//statement "oii") - Coming soon
+1. [police2](https://training.olinfo.it/#/task/ois_police2/statement "oii") - OIS
+2. [islands](https://training.olinfo.it/#/task/ois_islands/statement "oii") - OIS
+3. [rainstorm](https://training.olinfo.it/#/task/ois_rainstorm/statement "oii") - OIS
+4. [money](https://training.olinfo.it/#/task/ois_money/statement "oii") - OIS
+5. [police5](https://training.olinfo.it/#/task/ois_police5/statement "oii") - OIS
+6. [trip](https://training.olinfo.it/#/task/ois_trip/statement "oii") - OIS

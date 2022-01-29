@@ -23,5 +23,6 @@ root->left == (*root).left;  // scritture equivalenti
 
 ### Problemi della settimana
 
-1. [git](https://training.olinfo.it/#/task/ois_git/statement "oii") - OIS 2021
-2. [evacuation](https://training.olinfo.it/#/task/ois_evacuation/statement "oii") - OIS 2020
+1. [ropes](https://training.olinfo.it/#/task/ois_ropes/statement "oii") - OIS 2020
+2. [git](https://training.olinfo.it/#/task/ois_git/statement "oii") - OIS 2021
+3. [evacuation](https://training.olinfo.it/#/task/ois_evacuation/statement "oii") - OIS 2020
