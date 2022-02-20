@@ -4,7 +4,9 @@
 
 1. [Introduzione](http://disi.unitn.it/~montreso/asd/slides/00-introcorso.pdf "Montresor")
 2. [Divide-et-impera](http://disi.unitn.it/~montreso/asd/slides/12-divide.pdf "Montresor")
-3. [Programmazione dinamica](http://disi.unitn.it/~montreso/asd/slides/13-pd1.pdf "Montresor")
+3. [Programmazione dinamica 1](http://disi.unitn.it/~montreso/asd/slides/13-pd1.pdf "Montresor")
+4. [Programmazione dinamica 2](http://disi.unitn.it/~montreso/asd/slides/13-pd2.pdf "Montresor")
+5. [Programmazione dinamica 3](http://disi.unitn.it/~montreso/asd/slides/13-pd3.pdf "Montresor")
 
 
 
@@ -24,4 +26,12 @@ Merge sort (divide-et-impera)
 4. [sushi](https://training.olinfo.it/#/task/preoii_sushi/statement "oii") - Pre OII 2020
 5. [pickup](https://training.olinfo.it/#/task/ois_pickup/statement "oii") - OIS 2022
 6. [marcel](https://training.olinfo.it/#/task/ois_marcel/statement "oii") - OIS 2020
-7. [muzicari](https://open.kattis.com/problems/muzicari "kattis") - Croatian Open Competition 2008
+
+**Kattis**
+1. [muzicari](https://open.kattis.com/problems/muzicari "kattis") - Croatian Open Competition 2008
+2. [heritage](https://open.kattis.com/problems/heritage "kattis") - IDI Open 2016
+3. [narrowartgallery](https://open.kattis.com/problems/narrowartgallery "kattis") - 2014 ICPC North America Qualifier
+4. [solitaire](https://open.kattis.com/problems/solitaire "kattis") - GCPC 2013
+5. [orders](https://open.kattis.com/problems/orders "kattis") - KTH Challenge 2012
+6. [treasurediving](https://open.kattis.com/problems/treasurediving "kattis") - GCPC 2012
+7. [rollercoasterfun](https://open.kattis.com/problems/rollercoasterfun "kattis") - GCPC 2012
