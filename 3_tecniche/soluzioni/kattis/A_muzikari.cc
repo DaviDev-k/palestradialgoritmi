@@ -31,7 +31,7 @@ using namespace std;
  * la cui durata complessiva sia inferiore a t; se DP[i][t] == 0 significa che esiste un tale sottoinsieme che riempie
  * perfettamente il lasso di tempo t.
  * L'obiettivo è riempire il più possibile il lasso di tempo t, ovvero minimizzare il tempo residuo, da cui dipende la
- * sceltadi prendere o no l'intervallo i.
+ * scelta di prendere o no l'intervallo i.
  *
  *            { +∞                    t < 0
  *            { t                     i = 0
@@ -41,10 +41,10 @@ using namespace std;
  */
 
 int memo0(int i, int t, const vector<int> &d, vector<vector<int>> &DP) {
-	if (t < 0)         { return INT_MAX;      }  // out of range
-	if (DP[i][t] >= 0) { return DP[i][t];     }  // memoized
-	if (i == 0)        { return DP[i][t] = t; }  // base: no musician
-	if (t == 0)        { return DP[i][t] = 0; }  // base: no time left
+	if (t < 0) { return INT_MAX; }  // out of range
+	if (DP[i][t] >= 0) { return DP[i][t]; }  // memoized
+	if (i == 0) { return DP[i][t] = t; }  // base: no musician
+	if (t == 0) { return DP[i][t] = 0; }  // base: no time left
 	int not_taken = memo0(i - 1, t, d, DP);
 	int taken = memo0(i - 1, t - d[i], d, DP);
 	return DP[i][t] = min(taken, not_taken);
@@ -62,11 +62,11 @@ int memo0(int i, int t, const vector<int> &d, vector<vector<int>> &DP) {
  */
 
 int memo1(int i, int t, const vector<int> &d, vector<vector<int>> &DP) {
-	if (t < 0)            { return -INT_MAX;     }  // out of range
-	if (DP[i][t] >= 0)    { return DP[i][t];     }  // memoized
+	if (t < 0) { return -INT_MAX; }  // out of range
+	if (DP[i][t] >= 0) { return DP[i][t]; }  // memoized
 	if (i == 0 || t == 0) { return DP[i][t] = 0; }  // base: no musician or no time left
-	int not_taken = memo1(i - 1, t, d, DP);
-	int taken = memo1(i - 1, t - d[i], d, DP) + d[i];
+	int not_taken = memo1(i - 1, t, d, DP);            // DP[i - 1][t]
+	int taken = memo1(i - 1, t - d[i], d, DP) + d[i];  // DP[i - 1][t - d[i]]
 	return DP[i][t] = max(taken, not_taken);
 }
 
@@ -123,13 +123,13 @@ int main(int argc, char **argv) {
 	for (int i = 1; i <= N; i++) { cin >> d[i]; }
 	
 	vector<vector<int>> DP(N + 1, vector<int>(T + 1, -1));  // tabella DP
-	vector<int> sol(N + 1);  // vettore dei tempi di inizio degli intervalli (1-based)
-	
 	memo0(N, T, d, DP);
+	
+	vector<int> sol(N + 1);  // vettore dei tempi di inizio degli intervalli (1-based)
 	solution0(N, T, d, DP, sol);
 	
 	for (int i = 1; i <= N; i++) { cout << sol[i] << " "; }
-	
+
 #if 0
 	cout << endl;
 	for (int i = 0; i <= N; i++) {

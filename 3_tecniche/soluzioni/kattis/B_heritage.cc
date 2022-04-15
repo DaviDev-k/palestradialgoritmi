@@ -47,14 +47,12 @@ int main(int argc, char **argv) {
 		
 		// inizializza `DP[l]` al numero di significati di `w`, 0 se non presente in `dict`
 		DP[l] = (dict.count(w) > 0) ? dict[w] : 0;
-		for (int i = 1; i < l; i++) {  // `j` taglia `w` in due sottostringhe non vuote
+		for (int i = 1; i < l; i++) {  // `i` taglia `w` in due sottostringhe non vuote
 			string s_dict = w.substr(i, l - i);
-			
-			// è necessario utilizzare il modulo per non eccedere la capacità massima di long long unsigned
 			if (dict.count(s_dict) > 0) {
 				DP[l] += (DP[i] * dict[s_dict]) % MOD;  // equazione di ricorrenza
 				DP[l] %= MOD;
-			}
+			}  // è necessario utilizzare il modulo per non eccedere la capacità massima di long long unsigned
 		}
 	}
 	
