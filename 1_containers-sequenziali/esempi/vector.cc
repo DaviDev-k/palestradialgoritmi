@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 // STAMPA
 template<typename T>  // assaggio di programmazione generica (non capiterà mai di usarlo per risolvere un problema)
 void print_vector(vector<T> &v) {
@@ -14,6 +15,7 @@ void print_vector(vector<T> &v) {
 	}
 	cout << "] : " << v.size() << endl;
 }
+
 
 int main() {
 	
