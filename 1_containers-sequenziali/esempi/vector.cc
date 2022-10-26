@@ -38,10 +38,11 @@ int main() {
 	vi.pop_back();
 	print_vector(vi);
 /*
-	cout << "\n== OFFSET [] ==\n";
-	vi[1] = 4;
+	cout << "\n== OPERATOR[] & AT ==\n";
+	vi[0] = 3;
+	vi.at(1) = 5;
 	vi[8] = 4;  // ATTENZIONE: non vengono controllati i limiti del vettore
-	cout << vi[0] << " " << vi[1] << " " << vi[2] << endl;  // ATTENZIONE: vi[2] non è più un elemento del vettore
+	cout << vi.at(0) << " " << vi[1] << " " << vi[2] << endl;  // ATTENZIONE: vi[2] non è più un elemento del vettore
 	print_vector(vi);
 /*
 	cout << "\n== FRONT & BACK ==\n";
