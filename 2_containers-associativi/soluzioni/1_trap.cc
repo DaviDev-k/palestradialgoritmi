@@ -14,21 +14,19 @@ int main() {
 	unordered_set <string> other_song;    // parole di ogni altra canzone che appaiono anche nella prima (second_song ⊆ first_song)
 	unordered_multiset <string> counter;  // contatore del numero di altre canzoni in cui appare ogni parola della prima
 	
-	for (int i = 0; i < N; ++i) {
+	for (int i = 0; i < N; i++) {
 		int M;
 		cin >> M;
 		other_song.clear();  // ripulisci le parole della nuova canzone
-		for (int j = 0; j < M; ++j) {
+		for (int j = 0; j < M; j++) {
 			string s;
 			cin >> s;
 			if (i == 0) {  // se è la prima canzone, memorizza le sue parole
 				first_song.insert(s);
 				first_song_vec.push_back(s);
 			} else {
-				/*
-				 * Se la parola letta è presente nella prima canzone e non è ancora stata incontrata nella
-				 * canzone attuale, allora "incrementa" il contatore delle canzoni per tale parola
-				 */
+				// Se la parola letta è presente nella prima canzone e non è ancora stata incontrata nella
+				// canzone attuale, allora "incrementa" il contatore delle canzoni per tale parola
 				if (first_song.count(s) > 0 && other_song.count(s) == 0) {
 					counter.insert(s);     // "incrementa" il contatore
 					other_song.insert(s);  // evita che la stessa parola venga contata due volte per la stessa canzone
@@ -37,7 +35,7 @@ int main() {
 		}
 	}
 	
-	/* Stampa il contatore nell'ordine della prima canzone */
+	// Stampa il contatore nell'ordine della prima canzone
 	for (auto &s: first_song_vec) { cout << counter.count(s) << " "; }
 	
 	return 0;
