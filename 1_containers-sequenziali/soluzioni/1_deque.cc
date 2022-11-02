@@ -7,7 +7,7 @@ using namespace std;
 
 void printKMax(int arr[], int n, int k) {
 	
-	deque<int> dqi;
+	deque<int> dq;
 	dq.push_back(0);  // deque inizializzata ad un valore minimo
 	int i = 0;        // iteratore sulla lunghezza dell'array di input
 	
