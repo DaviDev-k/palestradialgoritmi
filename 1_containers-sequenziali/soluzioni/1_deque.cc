@@ -9,10 +9,9 @@ void printKMax(int arr[], int n, int k) {
 	
 	deque<int> dq;
 	dq.push_back(0);  // deque inizializzata ad un valore minimo
-	int i = 0;        // iteratore sulla lunghezza dell'array di input
 	
 	/* Per il primo intervallo di lunghezza k, riempi la dq con valori decrescenti, nell'ordine dell'input */
-	for (; i < k; i++) {
+	for (int i = 0; i < k; i++) {
 		/* `!dq.empty()` evita di estrarre da una deque vuota */
 		while (!dq.empty() && arr[i] > dq.back()) { dq.pop_back(); }
 		dq.push_back(arr[i]);
@@ -21,7 +20,7 @@ void printKMax(int arr[], int n, int k) {
 	cout << dq.front();  // stampa il valore massimo
 	
 	/* Per i restanti valori dell'input... */
-	for (; i < n; i++) {
+	for (int i = k; i < n; i++) {
 		
 		/* ...togli l'elemento in testa quando "viene sorpassato" */
 		if (arr[i - k] == dq.front()) { dq.pop_front(); }
