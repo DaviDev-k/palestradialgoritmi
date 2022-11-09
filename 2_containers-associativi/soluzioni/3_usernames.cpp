@@ -4,10 +4,12 @@
 
 using namespace std;
 
-/* Funzione che mappa un carattere nel range [0-36) */
+/* Funzione che mappa un carattere nel range [0-35] */
 int char_to_int(char c) {
-	if (c >= 'a' && c <= 'z') { return c - 'a'; }  // lettera: indice alfabetico
-	return (c - '0' + ('z' - 'a' + 1));   // cifra: numero stesso convertito in intero e sommato all'indice di 'z'
+	int ord;
+	if (c >= 'a' && c <= 'z') { ord = c - 'a'; }  // lettera: indice alfabetico
+	else { ord = c - '0' + ('z' - 'a' + 1); }     // cifra: numero stesso convertito in intero e sommato all'indice di 'z'
+	return ord;
 }
 
 int main() {
@@ -16,11 +18,12 @@ int main() {
 	
 	int N;
 	fin >> N;
-	vector <string> U(N);
+	vector<string> U(N);
 	for (int i = 0; i < N; i++) { fin >> U[i]; }
 	
 	/* Per ogni username genera il bitset dei suoi caratteri */
-	vector <bitset<('z' - 'a') + ('9' - '0') + 2>> bs(N);  // bitset di dimensione 36 (26 lettere + 10 cifre)
+	const int ALPHANUM_SIZE = ('z' - 'a') + ('9' - '0') + 2;
+	vector<bitset<ALPHANUM_SIZE>> bs(N);  // vettore di N bitset di dimensione 36 (26 lettere + 10 cifre)
 	for (int i = 0; i < N; i++) {
 		for (auto c: U[i]) {            // scorri i caratteri della stringa `U[i]`
 			bs[i].set(char_to_int(c));  // "inserisci" `c` nel bitset del relativo username
