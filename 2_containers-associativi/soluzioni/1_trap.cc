@@ -11,7 +11,7 @@ int main() {
 	cin >> N >> L;
 	vector<string> first_song_vec;       // vettore di parole della prima canzone, necessario per manterle in ordine
 	unordered_set<string> first_song;    // set delle parole della prima canzone, utile per verificarne la presenza
-	unordered_set<string> other_song;    // parole di ogni altra canzone che appaiono anche nella prima (second_song ⊆ first_song)
+	unordered_set<string> other_song;    // parole di ogni altra canzone che appaiono anche nella prima (other_song ⊆ first_song)
 	unordered_multiset<string> counter;  // contatore del numero di altre canzoni in cui appare ogni parola della prima
 	
 	for (int i = 0; i < N; i++) {
