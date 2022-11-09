@@ -4,11 +4,10 @@
 
 using namespace std;
 
-// input data
-int N, L;
-
 int main() {
+	int N, L;  // input data
 	cin >> N >> L;
+	
 	vector<string> first_song_vec;       // vettore di parole della prima canzone, necessario per manterle in ordine
 	unordered_set<string> first_song;    // set delle parole della prima canzone, utile per verificarne la presenza
 	unordered_set<string> other_song;    // parole di ogni altra canzone che appaiono anche nella prima (other_song ⊆ first_song)
