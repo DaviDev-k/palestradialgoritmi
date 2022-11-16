@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
 	cin >> N;  // numero di topic
 	cin >> T;  // finestra di tempo
 	
-	string new_topic, old_topic;   // nomi dei topic
+	string new_topic, old_topic;  // nomi dei topic
 	
 	deque<string> q;                              // coda dei trending topics degli ultimi T secondi
 	unordered_map<string, int> counter;           // contatore delle occorrenze di ogni topic presente nella coda
