@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
 	unordered_map<string, int> counter;           // contatore delle occorrenze di ogni topic presente nella coda
 	map<int, set<string>, greater<int>> buckets;  // associa il set di topic con lo stesso conteggio al conteggio stesso
 	
-	// buckets[count] = {t | counter[t] == count}  (tutti i topics con conteggio uguale a `count`)
+	// buckets[count] = {topic | counter[topic] == count}  (tutti i topics con conteggio uguale a `count`)
 	// buckets mantiene gli interi in ordine decrescente e le stringhe in ordine crescente
 	
 	// Inserisci i primi T topics
