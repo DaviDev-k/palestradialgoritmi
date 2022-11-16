@@ -34,16 +34,16 @@ int main(int argc, char **argv) {
 		cout << *(buckets.begin()->second.begin()) << endl;  // prima stringa del primo set
 		
 		// Rimuovi topic vecchio
-		old_topic = q.front();                              // topic più vecchio
-		buckets[counter[old_topic]].erase(old_topic);       // rimuovi `t` dal bucket del suo conteggio
+		old_topic = q.front();                         // topic più vecchio
+		buckets[counter[old_topic]].erase(old_topic);  // rimuovi `t` dal bucket del suo conteggio
 		if (buckets[counter[old_topic]].empty()) {
-			buckets.erase(counter[old_topic]);              // ripulisci il bucket se vuoto
+			buckets.erase(counter[old_topic]);         // ripulisci il bucket se vuoto
 		}
-		counter[old_topic]--;                               // decrementa il conteggio di `t`
-		if (counter[old_topic] > 0) {
-			buckets[counter[old_topic]].insert(old_topic);  // sposta `old_topic` nel bucket del suo conteggio, se ancora presente nella coda
+		int count = --counter[old_topic];      // decrementa il conteggio di `t`
+		if (count > 0) {
+			buckets[count].insert(old_topic);  // sposta `old_topic` nel bucket del suo conteggio, se ancora presente nella coda
 		} else {
-			counter.erase(t);                               // rimuovi `t` da counter se non più nella coda
+			counter.erase(old_topic);          // rimuovi `old_topic` da counter se non più nella coda
 		}
 		
 		// Aggiungi topic nuovo
