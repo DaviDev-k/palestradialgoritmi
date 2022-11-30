@@ -19,13 +19,13 @@ Merge sort (divide-et-impera)
 
 ## Programmazione dinamica
 
-1. Tradurre il problema in modo che sia trattabile con DP
+1. \[Tradurre il problema in modo che sia trattabile con DP\]
 2. Trovare i casi base
-3. Inferire i sottoproblemi a partire dai casi base
-4. Capire quale "scelta" debba essere fatta per ogni sottoproblema
+3. Definire i sottoproblemi, a partire dai casi base
+4. Capire quale "scelta" debba essere fatta per ogni sottoproblema (e.g. prendo o non prendo?)
 5. Inferire il problema generale dai sottoproblemi (equazione di ricorrenza)
 6. Trovare il valore della soluzione nella tabella DP
-7. [Ricostruire la soluzione]
+7. \[Ricostruire la soluzione\]
 
 
 ### Problemi della settimana
