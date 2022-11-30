@@ -31,4 +31,4 @@ int lastWine(int i) {
     return x;
 }
 ```
-Si risolve riempiendo le due righe della tabella DP da sinistra a destra. La funzione `lastWine(i)` serve a trovare l'ultimo vino che si è potuto bere prima di `i` dato che si è bevuto `i` (serve a rispettare il vincolo della gradazione alcolica crescente).
+Si risolve riempiendo le due righe della tabella DP da sinistra a destra. La funzione `lastWine(i)` serve a trovare l'ultimo vino che si è potuto bere prima di `i` quando si è bevuto `i` (serve a rispettare il vincolo della gradazione alcolica crescente).
