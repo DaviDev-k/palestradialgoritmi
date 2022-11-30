@@ -33,20 +33,22 @@ using namespace std;
  * L'obiettivo è riempire il più possibile il lasso di tempo t, ovvero minimizzare il tempo residuo, da cui dipende la
  * scelta di prendere o no l'intervallo i.
  *
- *            { +∞                    t < 0
- *            { t                     i = 0
- * DP[i][t] = { 0                     t = 0
- *            { min(DP[i-1][t-d[i]],  altrimenti
- *            {     DP[i-1][t])
+ *            ⎧ +∞                    t < 0
+ *            ⎪ t                     i = 0
+ * DP[i][t] = ⎨ 0                     t = 0
+ *            ⎪ min(DP[i-1][t-d[i]],  altrimenti
+ *            ⎩     DP[i-1][t])
  */
 
 int memo0(int i, int t, const vector<int> &d, vector<vector<int>> &DP) {
-	if (t < 0) { return INT_MAX; }  // out of range
-	if (DP[i][t] >= 0) { return DP[i][t]; }  // memoized
-	if (i == 0) { return DP[i][t] = t; }  // base: no musician
-	if (t == 0) { return DP[i][t] = 0; }  // base: no time left
-	int not_taken = memo0(i - 1, t, d, DP);
-	int taken = memo0(i - 1, t - d[i], d, DP);
+	if (t < 0)         { return INT_MAX;      }  // out of range (primo caso da controllare)
+	if (i == 0)        { return DP[i][t] = t; }  // base: no musician
+	if (t == 0)        { return DP[i][t] = 0; }  // base: no time left
+	if (DP[i][t] >= 0) { return DP[i][t];     }  // memoized
+	
+	int not_taken = memo0(i - 1, t,        d, DP);
+	int taken     = memo0(i - 1, t - d[i], d, DP);
+	
 	return DP[i][t] = min(taken, not_taken);
 }
 
@@ -55,18 +57,20 @@ int memo0(int i, int t, const vector<int> &d, vector<vector<int>> &DP) {
  * VERSIONE 1
  * Questa versione non è altro che la soluzione del problema dello zaino, in cui peso e profitto coincidono.
  *
- *             { -∞                           t < 0
- *  DP[i][t] = { 0                            i = 0 ∨ t = 0
- *             { max(DP[i-1][t-d[i]] + d[i],  altrimenti
- *             {     DP[i-1][t])
+ *             ⎧ -∞                           t < 0
+ *  DP[i][t] = ⎨ 0                            i = 0 ∨ t = 0
+ *             ⎪ max(DP[i-1][t-d[i]] + d[i],  altrimenti
+ *             ⎩     DP[i-1][t])
  */
 
 int memo1(int i, int t, const vector<int> &d, vector<vector<int>> &DP) {
-	if (t < 0) { return -INT_MAX; }  // out of range
-	if (DP[i][t] >= 0) { return DP[i][t]; }  // memoized
+	if (t < 0)            { return -INT_MAX;     }  // out of range (primo caso da controllare)
 	if (i == 0 || t == 0) { return DP[i][t] = 0; }  // base: no musician or no time left
-	int not_taken = memo1(i - 1, t, d, DP);            // DP[i - 1][t]
-	int taken = memo1(i - 1, t - d[i], d, DP) + d[i];  // DP[i - 1][t - d[i]]
+	if (DP[i][t] >= 0)    { return DP[i][t];     }  // memoized
+	
+	int not_taken = memo1(i - 1, t,        d, DP);         // DP[i - 1][t]
+	int taken     = memo1(i - 1, t - d[i], d, DP) + d[i];  // DP[i - 1][t - d[i]]
+	
 	return DP[i][t] = max(taken, not_taken);
 }
 
