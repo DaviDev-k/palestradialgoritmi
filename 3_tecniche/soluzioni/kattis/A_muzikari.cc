@@ -86,29 +86,23 @@ int memo1(int i, int t, const vector<int> &d, vector<vector<int>> &DP) {
  *
  */
 
-void solution0(int i, int t, const vector<int> &d, const vector<vector<int>> &DP, vector<int> &sol) {
-	int t1 = 0, t2 = 0;
-	for (; i > 0; i--) {
-		if (DP[i - 1][t - d[i]] < DP[i - 1][t]) {  // taken
-			sol[i] = t1;
-			t1 += d[i];
-			t -= d[i];
-		} else {  // not-taken
-			sol[i] = t2;
-			t2 += d[i];
-		}
-	}
+bool taken0(int i, int t, const vector<int> &d, const vector<vector<int>> &DP) {
+	return DP[i - 1][t - d[i]] < DP[i - 1][t];
 }
 
-void solution1(int i, int t, const vector<int> &d, const vector<vector<int>> &DP, vector<int> &sol) {
-	int T = t;
+bool taken1(int i, int t, const vector<int> &d, const vector<vector<int>> &DP, int T) {
+	return DP[i - 1][t - d[i]] + d[i] > DP[i - 1][t] && t1 + d[i] <= T
+}
+
+void solution0(int i, int t, const vector<int> &d, const vector<vector<int>> &DP, vector<int> &sol) {
 	int t1 = 0, t2 = 0;
+	int T = t;
 	for (; i > 0; i--) {
-		if (DP[i - 1][t - d[i]] + d[i] > DP[i - 1][t] && t1 + d[i] <= T) {  // taken
-			t -= d[i];
+		if (taken0(i, t, d, DP)) {
 			sol[i] = t1;
 			t1 += d[i];
-		} else {  // not-taken
+			t -= d[i];
+		} else {
 			sol[i] = t2;
 			t2 += d[i];
 		}
