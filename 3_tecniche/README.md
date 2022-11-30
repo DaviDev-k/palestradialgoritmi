@@ -18,7 +18,7 @@ Merge sort (divide-et-impera)
 
 
 ## Programmazione dinamica
-
+### Fasi di risoluzione
 1. \[Tradurre il problema in modo che sia trattabile con DP\]
 2. Trovare i casi base
 3. Definire i sottoproblemi, a partire dai casi base
