@@ -21,9 +21,9 @@ Si risolve riempiendo il triangolo inferiore della matrice DP a partire dalla ba
 
 ## [sommelier](https://training.olinfo.it/#/task/sommelier/statement "oii")
 ```
-            ⎧ 0                              i < 1
-DP[sn][i] = ⎨ max(DP[SI][i-1], DP[NO][i-1]   sn = NO
-            ⎩ i + DP[SI][prevWine(i)]        sn = SI
+            ⎧ 0                            i < 1
+DP[yn][i] = ⎨ max(DP[Y][i-1], DP[N][i-1]   yn = N
+            ⎩ i + DP[Y][prevWine(i)]       yn = Y
 
 int prevWine(int i) {
     int x;
@@ -31,6 +31,6 @@ int prevWine(int i) {
     return x;
 }
 ```
-Si risolve riempiendo le due righe della tabella DP da sinistra a destra.
+Si risolve riempiendo le due righe (Y=taken, N=not_taken) della tabella DP da sinistra a destra.
 
 La funzione `prevWine(i)` serve a trovare l'ultimo vino che si è potuto bere prima di `i` nel caso in cui si decida di bere `i` (serve a rispettare il vincolo della gradazione alcolica crescente).
