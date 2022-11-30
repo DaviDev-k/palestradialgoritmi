@@ -1,22 +1,34 @@
-## [discesa](https://training.olinfo.it/#/task/discesa/statement "oii")
-
-Si risolve riempiendo il triangolo inferiore della matrice DP a partire dalla base (casi base con i = H) e poi risalendo bottom-up riga per riga.
-
+## [minato](https://training.olinfo.it/#/task/minato/statement "oii")
 ```
-           ⎧ -1                          j < i
-DP[i][j] = ⎨ A[i][j]                     i = H
-           ⎪ A[i][j] + max(DP[i+1][j],   altrimenti
+           ⎧ 0                         i < 1 ∨ j < 1
+DP[i][j] = ⎨ 1                         i = 1 ∧ j = 1
+           ⎪ 0                         A[i][j] = '+'
+           ⎩ DP[i-1][j] + DP[i][j-1]   A[i][j] = '*'
+```
+Si risolve riempiendo la matrice DP riga per riga a partire dalla cella `(1,1)`.
+
+
+## [discesa](https://training.olinfo.it/#/task/discesa/statement "oii")
+```
+           ⎧ -1                           j < i
+DP[i][j] = ⎨ A[i][j]                      i = H
+           ⎪ A[i][j] + max(DP[i+1][j],    altrimenti
            ⎩               DP[i+1][j+1]
 ```
+Si risolve riempiendo il triangolo inferiore della matrice DP a partire dalla base (casi base con `i = H`) e poi si risale bottom-up riga per riga.
+
 
 
 ## [sommelier](https://training.olinfo.it/#/task/sommelier/statement "oii")
 ```
-           ⎧ +∞                    t < 0
-           ⎪ t                     i = 0
-DP[i][t] = ⎨ 0                     t = 0
-           ⎪ min(DP[i-1][t-d[i]],  altrimenti
-           ⎩     DP[i-1][t])
-```
+            ⎧ 0                              i < 1
+DP[sn][i] = ⎨ max(DP[SI][i-1], DP[NO][i-1]   sn = NO
+            ⎩ i + DP[SI][lastWine(i)]        sn = SI
 
-## [minato](https://training.olinfo.it/#/task/minato/statement "oii")
+int lastWine(int i) {
+    int x;
+    for(x = i - 2; x > 0 || A[x] > A[i]; x--);
+    return x;
+}
+```
+Si risolve riempiendo le due righe della tabella DP da sinistra a destra. La funzione `lastWine(i)` serve a trovare l'ultimo vino che si è potuto bere prima di `i` dato che si è bevuto `i` (serve a rispettare il vincolo della gradazione alcolica crescente).
