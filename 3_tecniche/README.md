@@ -20,9 +20,9 @@ Merge sort (divide-et-impera)
 
 ### Problemi della settimana
 
-1. [discesa](https://training.olinfo.it/#/task/discesa/statement "oii") - OII territoriali 2016
-2. [sommelier](https://training.olinfo.it/#/task/sommelier/statement "oii") - OII territoriali 2014
-3. [minato](https://training.olinfo.it/#/task/minato/statement "oii") - Classico
+1. [minato](https://training.olinfo.it/#/task/minato/statement "oii") - Classico
+2. [discesa](https://training.olinfo.it/#/task/discesa/statement "oii") - OII territoriali 2016
+3. [sommelier](https://training.olinfo.it/#/task/sommelier/statement "oii") - OII territoriali 2014
 4. [sushi](https://training.olinfo.it/#/task/preoii_sushi/statement "oii") - Pre OII 2020
 5. [pickup](https://training.olinfo.it/#/task/ois_pickup/statement "oii") - OIS 2022
 6. [marcel](https://training.olinfo.it/#/task/ois_marcel/statement "oii") - OIS 2020
