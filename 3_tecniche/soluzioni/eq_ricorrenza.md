@@ -23,9 +23,9 @@ Si risolve riempiendo il triangolo inferiore della matrice DP a partire dalla ba
 ```
             ⎧ 0                              i < 1
 DP[sn][i] = ⎨ max(DP[SI][i-1], DP[NO][i-1]   sn = NO
-            ⎩ i + DP[SI][lastWine(i)]        sn = SI
+            ⎩ i + DP[SI][prevWine(i)]        sn = SI
 
-int lastWine(int i) {
+int prevWine(int i) {
     int x;
     for(x = i - 2; x > 0 || A[x] > A[i]; x--);
     return x;
@@ -33,4 +33,4 @@ int lastWine(int i) {
 ```
 Si risolve riempiendo le due righe della tabella DP da sinistra a destra.
 
-La funzione `lastWine(i)` serve a trovare l'ultimo vino che si è potuto bere prima di `i` nel caso in cui si decida di bere `i` (serve a rispettare il vincolo della gradazione alcolica crescente).
+La funzione `prevWine(i)` serve a trovare l'ultimo vino che si è potuto bere prima di `i` nel caso in cui si decida di bere `i` (serve a rispettare il vincolo della gradazione alcolica crescente).
