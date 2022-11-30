@@ -17,6 +17,16 @@ Merge sort (divide-et-impera)
 - [Descrizione dell'algoritmo](https://www.geeksforgeeks.org/merge-sort/)
 
 
+## Programmazione dinamica
+
+1. Tradurre il problema in modo che sia trattabile con DP
+2. Trovare i casi base
+3. Inferire i sottoproblemi a partire dai casi base
+4. Capire quale "scelta" debba essere fatta per ogni sottoproblema
+5. Inferire il problema generale dai sottoproblemi (equazione di ricorrenza)
+6. Trovare il valore della soluzione nella tabella DP
+7. [Ricostruire la soluzione]
+
 
 ### Problemi della settimana
 
