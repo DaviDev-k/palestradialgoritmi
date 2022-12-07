@@ -24,17 +24,20 @@ enum {
  *                 spesa residua rimane inalterata
  *
  * A seconda dell'esito dei sottoproblemi (i, s-C[i]) e (i-1, s), possono verificarsi 4 possibili esiti per (i, s):
- *  - almeno uno AMB → AMB :  (i, s) è risolto da una soluzione ambigua
- *  - entrambi OKK   → AMB :  esistono due combinazioni valide che risolvono (i, s)
- *  - solo uno OKK   → OKK :  esiste una sola combinazione valida che risolve (i, s)
- *  - entrambi IMP   → IMP :  non esiste alcuna combinazione valida che risolve (i, s)
+ *  - almeno uno AMB        → AMB :  (i, s) è risolto da una soluzione ambigua
+ *  - entrambi OKK          → AMB :  esistono due combinazioni valide che risolvono (i, s)
+ *  - uno OKK e l'altro IMP → OKK :  esiste una sola combinazione valida che risolve (i, s)
+ *  - entrambi IMP          → IMP :  non esiste alcuna combinazione valida che risolve (i, s)
  *
  * SOLUZIONE: la soluzione del problema decisionale (OKK, AMB o IMP) per un dato input (N, s) può essere immediatamente
  * trovata nella rispettiva cella della tabella DP[N][S]; nel caso di esito OKK è necessario ricostruire la soluzione.
- *
- *             ⎧ OKK   (DP[i][s-C[i]] = OKK ⩒ DP[i-1][s] = OKK) ∨ (s = 0)
- *  DP[i][s] = ⎨ AMB   (DP[i][s-C[i]] = AMB ∨ DP[i-1][s] = AMB) ∨ (DP[i][s-C[i]] = OKK ∧ DP[i-1][s] = OKK)
- *             ⎩ IMP   (DP[i][s-C[i]] = IMP ∧ DP[i-1][s] = IMP) ∨ (i ≤ 0) ∨ (s < 0)
+ * 
+ *             ⎧ IMP   (taken = IMP ∧ notTaken = IMP) ∨ (i ≤ 0) ∨ (s < 0)
+ *  DP[i][s] = ⎨ OKK   (taken = OKK ∧ notTaken = IMP) ∨ (taken = IMP ∧ notTaken = OKK) ∨ (s = 0)
+ *             ⎩ AMB   (taken = AMB ∨ notTaken = AMB) ∨ (taken = OKK ∧ notTaken = OKK)
+ *  
+ *  taken = DP[i][s-C[i]
+ *  notTaken = DP[i-1][s]
  */
 
 
