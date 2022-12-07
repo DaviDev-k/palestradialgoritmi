@@ -40,10 +40,10 @@ enum {
 
 int memo(int i, int s, const vector<int> &C, vector<vector<int>> &DP) {
 	
-	if (s < 0)           { return IMP;      }  // out of range
-	if (i == 0)          { return IMP;      }  // base: nessun piatto
-	if (s == 0)          { return OKK;      }  // base: resto preciso
-	if (DP[i][s] != NIL) { return DP[i][s]; }  // memoized
+	if (s < 0)           { return DP[i][s] = IMP; }  // out of range
+	if (i == 0)          { return DP[i][s] = IMP; }  // base: nessun piatto
+	if (s == 0)          { return DP[i][s] = OKK; }  // base: resto preciso
+	if (DP[i][s] != NIL) { return DP[i][s];       }  // memoized
 	
 	int taken     = memo(i, s - C[i], C, DP);
 	int not_taken = memo(i - 1, s, C, DP);
