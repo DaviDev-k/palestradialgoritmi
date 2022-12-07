@@ -18,7 +18,14 @@ Merge sort (divide-et-impera)
 
 
 ## Programmazione dinamica
-### Fasi di risoluzione
+### Domande
+- Qual è la dimensione della tabella?
+- Dove si trova la soluzione del problema?
+- Con quali valori deve essere riempita la tabella?
+- Da quali celle dipende un sottoproblema?
+- Quali scelte posso fare per ogni sottoproblema?
+
+### Fasi di risoluzione (non sono in ordine stretto)
 1. \[Tradurre il problema in modo che sia trattabile con DP\]
 2. Trovare i casi base
 3. Definire i sottoproblemi, a partire dai casi base
