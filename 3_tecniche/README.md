@@ -24,6 +24,7 @@ Merge sort (divide-et-impera)
 - Con quali valori deve essere riempita la tabella?
 - Da quali celle dipende un sottoproblema?
 - Quali scelte posso fare per ogni sottoproblema?
+- \[Come ricostruire la soluzione?\]
 
 ### Fasi di risoluzione (non sono in ordine stretto)
 1. \[Tradurre il problema in modo che sia trattabile con DP\]
