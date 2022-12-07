@@ -9,12 +9,6 @@ enum {
 	NIL   // non calcolato
 };
 
-void scan(int &n);
-
-void print(int n);
-
-void print(string s);
-
 
 /*
  * IDEA: il problema è una variazione dello zaino senza limiti in cui peso e profitto coincidono. Ogni sottoproblema
@@ -81,12 +75,12 @@ int main(int argc, char **argv) {
 	if (argc > 1) { (void) !freopen(argv[1], "r", stdin); }
 	
 	int N, M;
-	scan(N);
+	cin >> N;
 	vector<int> C(N + 1);
-	for (int n = 1; n <= N; n++) { scan(C[n]); }
-	scan(M);
+	for (int n = 1; n <= N; n++) { cin >> C[n]; }
+	cin >> M;
 	vector<int> S(M);
-	for (int m = 0; m < M; m++) { scan(S[m]); }
+	for (int m = 0; m < M; m++) { cin >> S[m]; }
 	
 	// Si utilizza un'unica tabella DP, di dimensione pari al massimo valore di `S`
 	int max_s = *max_element(S.begin(), S.end());
@@ -99,19 +93,18 @@ int main(int argc, char **argv) {
 			case OKK:
 				solution(N, s, C, DP, sol);
 				while (!sol.empty()) {
-					print(sol.top());
-					print(" ");
+					cout << sol.top() << " ";
 					sol.pop();
 				}
 				break;
 			case AMB:
-				print("Ambiguous");
+				cout << "Ambiguous";
 				break;
 			case IMP:
-				print("Impossible");
+				cout << "Impossible";
 				break;
 		}
-		print("\n");
+		cout << endl;
 	}
 
 #if 0
@@ -124,29 +117,3 @@ int main(int argc, char **argv) {
 	
 	return 0;
 }
-
-
-void scan(int &n) {
-	n = 0;
-	char c = getchar();
-	while (!(c >= '0' && c <= '9')) { c = getchar(); }
-	for (; !feof(stdin) && c >= '0' && c <= '9'; c = getchar()) { n = n * 10 + c - '0'; }
-}
-
-void print(int n) {
-	if (n == 0) {
-		putchar('0');
-		return;
-	}
-	string s;
-	while (n > 0) {
-		s += (n % 10) + '0';
-		n /= 10;
-	}
-	for (int i = s.length() - 1; i >= 0; i--) { putchar(s[i]); }
-}
-
-void print(string s) {
-	for (int i = 0; s[i] != 0; i++) { putchar(s[i]); }
-}
-
