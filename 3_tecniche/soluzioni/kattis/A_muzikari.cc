@@ -94,7 +94,7 @@ bool taken1(int i, int t, const vector<int> &d, const vector<vector<int>> &DP, i
 	return DP[i - 1][t - d[i]] + d[i] > DP[i - 1][t] && t1 + d[i] <= T
 }
 
-void solution0(int i, int t, const vector<int> &d, const vector<vector<int>> &DP, vector<int> &sol) {
+void solution(int i, int t, const vector<int> &d, const vector<vector<int>> &DP, vector<int> &sol) {
 	int t1 = 0, t2 = 0;
 	int T = t;
 	for (; i > 0; i--) {
@@ -124,7 +124,7 @@ int main(int argc, char **argv) {
 	memo0(N, T, d, DP);
 	
 	vector<int> sol(N + 1);  // vettore dei tempi di inizio degli intervalli (1-based)
-	solution0(N, T, d, DP, sol);
+	solution(N, T, d, DP, sol);
 	
 	for (int i = 1; i <= N; i++) { cout << sol[i] << " "; }
 
