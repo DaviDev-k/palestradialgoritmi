@@ -19,12 +19,12 @@ Merge sort (divide-et-impera)
 
 ## Programmazione dinamica
 ### Domande
-- Qual è la dimensione della tabella?
-- Dove si trova la soluzione del problema?
-- Con quali valori deve essere riempita la tabella?
-- Da quali celle dipende un sottoproblema?
-- Quali scelte posso fare per ogni sottoproblema?
-- \[Come ricostruire la soluzione?\]
+1. Qual è la dimensione della tabella?
+2. Dove si trova la soluzione del problema?
+3. Con quali valori deve essere riempita la tabella?
+4. Quali scelte posso fare per ogni sottoproblema?
+5. Da quali celle dipende un sottoproblema?
+6. \[Come ricostruire la soluzione?\]
 
 ### Fasi di risoluzione (non sono in ordine stretto)
 1. \[Tradurre il problema in modo che sia trattabile con DP\]
