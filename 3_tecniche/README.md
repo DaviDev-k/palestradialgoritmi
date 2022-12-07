@@ -19,21 +19,22 @@ Merge sort (divide-et-impera)
 
 ## Programmazione dinamica
 ### Domande
-1. Qual è la dimensione della tabella?
-2. Dove si trova la soluzione del problema?
-3. Con quali valori deve essere riempita la tabella?
-4. Quali scelte posso fare per ogni sottoproblema?
-5. Da quali celle dipende un sottoproblema?
-6. \[Come ricostruire la soluzione?\]
+- Quali sono i casi base?
+- Qual è la dimensione della tabella?
+- Dove si trova la soluzione del problema?
+- Con quali valori deve essere riempita la tabella?
+- Quali scelte posso fare per ogni sottoproblema?
+- Da quali celle dipende un sottoproblema?
+- \[Come ricostruire la soluzione?\]
 
-### Fasi di risoluzione (non sono in ordine stretto)
-1. \[Tradurre il problema in modo che sia trattabile con DP\]
-2. Trovare i casi base
-3. Definire i sottoproblemi, a partire dai casi base
-4. Capire quale "scelta" debba essere fatta per ogni sottoproblema (e.g. prendo o non prendo?)
-5. Inferire il problema generale dai sottoproblemi (equazione di ricorrenza)
-6. Trovare il valore della soluzione nella tabella DP
-7. \[Ricostruire la soluzione\]
+### Fasi di risoluzione
+- \[Tradurre il problema in modo che sia trattabile con DP\]
+- Trovare i casi base
+- Definire i sottoproblemi, a partire dai casi base
+- Capire quale "scelta" debba essere fatta per ogni sottoproblema (e.g. prendo o non prendo?)
+- Inferire il problema generale dai sottoproblemi (equazione di ricorrenza)
+- Trovare il valore della soluzione nella tabella DP
+- \[Ricostruire la soluzione\]
 
 
 ### Problemi della settimana
