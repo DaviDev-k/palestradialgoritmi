@@ -30,3 +30,6 @@ adj[1] = {{0, 3}, {2, 4}};
 5. [airstrike](https://training.olinfo.it/#/task/ois_airstrike/statement "oii") - OIS
 6. [police5](https://training.olinfo.it/#/task/ois_police5/statement "oii") - OIS
 7. [trip](https://training.olinfo.it/#/task/ois_trip/statement "oii") - OIS
+
+#### Kattis contest
+- [Kattis contest](https://open.kattis.com/contests/z4dra4/problems)
