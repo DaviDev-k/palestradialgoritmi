@@ -34,6 +34,23 @@ Questa repository sarà il contenitore di tutte le attività che verranno propos
 troverete link ad esercizi da svolgere (fonte: correttore delle olimpiadi), codice delle soluzioni, spiegazione delle
 soluzioni e alcune note teoriche o di programmazione.
 
+### Utility
+
+```c++
+// funzione per leggere da input una stringa compresa fra due caratteri di spaziatura
+// aggiorna la stringa passata per riferimento e restituisce l'ultimo carattere letto
+char scan(string &s) {
+	s = "";
+	char c = getchar();
+	while (c == ' ' || c == '\n' || c == '\t') { c = getchar(); }
+	for (; c != ' ' && c != '\n' && c != '\t'; c = getchar()) {
+		s += c;
+	}
+	s += '\0';
+	return c;
+}
+```
+
 ### Contatti
 Davide Vecchi
 - Mail: [davide.vecchi@studenti.unitn.it](mailto:davide.vecchi@studenti.unitn.it)
