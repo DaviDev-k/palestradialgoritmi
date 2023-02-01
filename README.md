@@ -39,6 +39,7 @@ soluzioni e alcune note teoriche o di programmazione.
 ```c++
 // funzione per leggere da input una stringa compresa fra due caratteri di spaziatura
 // aggiorna la stringa passata per riferimento e restituisce l'ultimo carattere letto
+
 char scan(string &s) {
 	s = "";
 	char c = getchar();
