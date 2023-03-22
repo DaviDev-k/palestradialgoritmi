@@ -29,8 +29,9 @@ public:
     // Merge the sets containing x and y
     void merge(int x, int y) {
         int px = find(x), py = find(y);
-        if (px == py) return;
-        parent[py] = px;
+        if (px != py) {
+            parent[py] = px;
+        }
     }
 
     // Check if x and y belong to the same set
