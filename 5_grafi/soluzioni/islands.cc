@@ -79,7 +79,7 @@ int main() {
                     M[now][c] = WATER;
                     continue;
                 }
-			}
+            }
 			
             int prev_r = M[!now][c];     // cella sopra
             int prev_c = M[now][c - 1];  // cella sinistra
